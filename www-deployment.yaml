@@ -18,4 +18,5 @@ spec:
         - name: www
           image: nginx:1.21.6-alpine
           ports:
-          - containerPort: 8080
+          - containerPort: 80
+            name: www-port

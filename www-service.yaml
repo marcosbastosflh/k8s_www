@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: www-service
 spec:
-  type: NodePort
+  type: LoadBalancer
   selector:
     app: www
   ports:

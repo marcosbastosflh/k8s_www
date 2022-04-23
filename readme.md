@@ -13,13 +13,15 @@
 
 | Conceito | Arquivo |
 | ------ | ------ |
+| Namespace | www-namespace |
 | Deployment | www-deployment |
-| Sevice | www-service |
+| Service | www-service |
 | Ingress | www-ingress |
 
 ## Comandos
 ``` sh
-kubectl appky -f www-deployment.yaml
-kubectl appky -f www-service.yaml
-kubectl appky -f www-ingress.yaml
+kubectl apply -f www-namespace.yaml
+kubectl apply -f www-deployment.yaml
+kubectl apply -f www-service.yaml
+kubectl apply -f www-ingress.yaml
 ```

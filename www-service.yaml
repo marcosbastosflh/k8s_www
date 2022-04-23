@@ -2,12 +2,13 @@ apiVersion: v1
 kind: Service
 metadata:
   name: www-service
+  namespace: www
 spec:
-  type: LoadBalancer
+  type: ClusterIP
   selector:
     app: www
   ports:
     - protocol: TCP
       port: 8080
-      nodePort: 32100
+      name: www-svc-port
       targetPort: www-port

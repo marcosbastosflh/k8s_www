@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: www-deployment
+  namespace: www
   labels:
     app: www
 spec:
@@ -18,5 +19,5 @@ spec:
         - name: www
           image: nginx:1.21.6-alpine
           ports:
-          - containerPort: 80
-            name: www-port
+            - containerPort: 80
+              name: www-port

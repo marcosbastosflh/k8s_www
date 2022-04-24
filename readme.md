@@ -24,4 +24,6 @@ kubectl apply -f www-namespace.yaml
 kubectl apply -f www-deployment.yaml
 kubectl apply -f www-service.yaml
 kubectl apply -f www-ingress.yaml
+kubectl apply -f .
+kubectl delete all --all -n www
 ```

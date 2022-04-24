@@ -1,23 +1,23 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: www-deployment
+  name: httpd-deployment
   namespace: www
   labels:
-    app: www
+    app: httpd
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: www
+      app: httpd
   template:
     metadata:
       labels:
-        app: www
+        app: httpd
     spec:
       containers:
-        - name: www
-          image: nginx:1.21.6-alpine
+        - name: httpd
+          image: httpd
           ports:
             - containerPort: 80
-              name: www-port
+              name: httpd-port

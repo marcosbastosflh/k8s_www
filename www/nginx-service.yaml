@@ -1,14 +1,14 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: www-service
+  name: nginx-service
   namespace: www
 spec:
   type: ClusterIP
   selector:
-    app: www
+    app: nginx
   ports:
     - protocol: TCP
       port: 8080
-      name: www-svc-port
-      targetPort: www-port
+      name: nginx-svc-port
+      targetPort: nginx-port
